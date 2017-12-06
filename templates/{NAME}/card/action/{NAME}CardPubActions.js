@@ -6,9 +6,13 @@ define(
                 'actionType',
                 ctx + 'modules/webpub/pub/resource/action/card/editAction.js',
                 ctx + 'modules/webpub/pub/resource/action/card/deleteAction.js',
-                ctx + 'modules/webpub/pub/resource/action/card/saveAction.js'],
+                ctx + 'modules/webpub/pub/resource/action/card/saveAction.js',
+                ctx+ 'modules/webpub/pub/resource/action/card/uploadFileAction.js',
+                ctx+ 'modules/webpub/pub/resource/action/card/viewFileAction.js',
+                ],
         function(actionType, editAction,
-                deleteAction, saveAction) {
+                deleteAction, saveAction,uploadFileAction,
+                viewFileAction) {
             return {
 
                 headActions : function() {
@@ -33,6 +37,8 @@ define(
                         hasUploader : true,
                         hid : "pk_{DATA}"
                     });
+                    var _uploadFileAction = new uploadFileAction();
+                    var _viewFileAction = new viewFileAction();
                     var headAction = [ {
                         // 返回
                         code : actionType.COMEBACK.CODE
@@ -54,7 +60,7 @@ define(
                         // 取消
                         code : actionType.CANCEL.CODE
                     // 保存
-                    }, _saveAction ];
+                    }, _saveAction ,_uploadFileAction, _viewFileAction ];
 
                     return headAction;
                 },
