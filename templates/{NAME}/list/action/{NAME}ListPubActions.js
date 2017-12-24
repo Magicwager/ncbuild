@@ -13,11 +13,7 @@ define(
                 ctx
                         + 'modules/webpub/pub/resource/action/list/listBodyDeleteAction.js',
                 ctx
-                        + 'modules/webpub/pub/resource/action/list/listBodyDetailAction.js',
-                ctx
-                        + 'modules/webpub/pub/resource/action/list/listBodyPublishAction.js' ,
-                 ctx
-                        + 'modules/webpub/pub/resource/action/list/listBodyUnPublishAction.js' ],
+                        + 'modules/webpub/pub/resource/action/list/listBodyDetailAction.js'],
         function(listActionType,listAddAction, listDeleteAction,
                 listBodyEditAction, listBodyDeleteAction,listBodyDetailAction,listBodyPublishAction,listBodyUnPublishAction) {
             return {

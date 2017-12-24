@@ -60,7 +60,7 @@ define(
                         // 取消
                         code : actionType.CANCEL.CODE
                     // 保存
-                    }, _saveAction ,_uploadFileAction, _viewFileAction ];
+                    }, _saveAction ,_uploadFileAction, _viewFileAction];
 
                     return headAction;
                 },
